@@ -1,0 +1,41 @@
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(240,240,240,0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px; 
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+
+    &__help {
+        font-size: 14px;
+        font-weight: 300;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 2px;
+            width: 16px;
+            height: 16px;
+            background-image: url('../img/help.png')
+        }
+    }
+
+    &__user {
+        margin-left: 20px; 
+        font-size: 16px;
+    }
+}

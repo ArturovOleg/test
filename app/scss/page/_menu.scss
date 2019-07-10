@@ -1,0 +1,199 @@
+.menu {
+    position: fixed;
+    padding-top: 65px;
+    border-right: 1px solid #f0f0f0;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    left: -36px;
+    animation: move-out 0.5s ease forwards;
+    z-index: 1;
+    background-color: #fff;
+
+    &:hover {
+        animation: move-in 0.5s ease forwards;
+    }
+
+   
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+
+        button {
+            background-image: url('../img/menu.png');
+            width: 13px;
+            height: 10px;
+            background-color: #fff;
+            align-self: flex-end;
+            margin: 5px 5px;
+            margin-bottom: 10px;
+        }
+
+        .icon-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            i {
+                color: #bebebd;
+                transition: color 0.5s ease;
+                &:hover {
+                    color: #e37222;
+                }
+            }
+
+            .tab-item {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    height: 0;
+                    border-right: 2px solid #e37222;
+                }
+
+                .user {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+
+        
+            
+    }
+}
+
+.tab-item:hover.tab-item:after {
+    animation: anima 0.5s ease forwards;
+}
+
+@keyframes move-in {
+    from{
+        left: -36px;
+    } 
+    to {
+        left: 0;
+    }
+}
+
+@keyframes move-out {
+    from{
+        left: 0;
+    } 
+    to {
+        left: -36px;
+    }
+}
+
+@keyframes anima {
+    from{
+        top: 50%;
+        height: 0;
+    } 
+    to {
+        top: 0;
+        height: 100%;
+    }
+}
+
+
+// media 
+@media (max-width: 1200px) {
+    .company-form {
+        width: 70%;
+    } 
+
+    .first-step {
+        padding: 80px 15px;
+    }
+
+    .characteristic-name{
+        &__item {
+            font-size: 10px;
+        }
+
+        &__size {
+            width: 10%;
+        }
+
+        &__number {
+            width: 10%;
+        }
+    }
+
+    .characteristic-value{
+        &__item {
+            font-size: 12px;
+        }
+
+        &__size {
+            width: 10%;
+        }
+
+        &__number {
+            width: 10%;
+        }
+
+        &__description-small {
+            font-size: 12px;
+        }
+    
+        &__nmfc-small {
+            font-size: 12px;
+        }
+    
+        &__class-small {
+            font-size: 12px;
+        }
+    
+        &__nop-small {
+            font-size: 12px;
+        }
+    
+        &__weight-small {
+            font-size: 12px;
+        }
+    
+        &__sub-small {
+            font-size: 13px;
+        }
+    }
+
+    .choose-line {
+        select {
+            font-size: 10px;
+        }
+    
+        input {
+            font-size: 10px;
+        }
+    
+        &__name {
+            width: 25%;
+        }
+    
+        &__hazard {
+            width: 20%;
+        }
+    
+    
+        &__packing {
+            width: 17%;
+        }
+    
+        &__un-number {
+            width: 13%;
+        }
+    
+        &__pack-type {
+            width: 14%;
+        }
+    }
+}
